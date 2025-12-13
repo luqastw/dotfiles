@@ -1,7 +1,7 @@
 set $mod Mod4
-set $term kitty
+set $term alacritty
 
-font pango:Iosevka 12
+font pango:Iosevka Nerd Font 12
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -25,6 +25,9 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec $term
 bindsym $mod+c kill
 bindsym $mod+d exec --no-startup-id dmenu_run -nb "#1a1b26" -nf "#c0caf5" -sb "#7aa2f7" -sf "#1a1b26" -fn "Iosevka Nerd Font:size=10"
+
+bindsym $mod+F11 exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+F11 exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
 # change focused window
 bindsym $mod+j focus down
@@ -159,8 +162,8 @@ bar {
     urgent_workspace   #f7768e #f7768e #1a1b26
     binding_mode       #f7768e #f7768e #1a1b26
   }
-  font pango:Iosevka Term 10
-  tray_output eDP
+  font pango:Iosevka Nerd Font 10
+  tray_output primary
 }
 
 # exec --no-startup-id xset r rate 200 50
@@ -168,19 +171,16 @@ bar {
 
 # gaps
 
-gaps inner 10
+gaps inner 5
 gaps outer 3
 workspace 5 gaps horizontal 150
 workspace 5 gaps vertical 50
 workspace 5 gaps inner 10
 
-
-exec --no-startup-id xfsettingsd --sm-client-disable
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id xfce4-clipman
 exec --no-startup-id dunst
 exec --no-startup-id thunar --daemon
-exec --no-startup-id xfce4-volumed
+exec --no-startup-id /usr/lib/kwalletd5
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec --no-startup-id fcitx -d
 
 exec_always --no-startup-id picom
@@ -190,3 +190,13 @@ exec_always --no-startup-id nitrogen --restore
 
 default_border pixel 2
 default_floating_border pixel 1
+
+# --- Configuração do JARVIS ---
+
+# 1. Define que a janela com título "Jarvis Security" será flutuante e centralizada
+for_window [title="Jarvis Security"] floating enable
+for_window [title="Jarvis Security"] resize set 800 600
+for_window [title="Jarvis Security"] move position center
+
+# 2. Executa o script no boot (Troque 'alacritty' pelo seu terminal)
+exec --no-startup-id alacritty --title "Jarvis Security" -e /home/luqastw/jarvis_security.sh
