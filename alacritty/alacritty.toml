@@ -1,55 +1,65 @@
 [window]
-dimensions = { columns = 90, lines = 22 }
-padding = { x = 5, y = 5 }
+dimensions = { columns = 95, lines = 21 }
+padding = { x = 20, y = 20 }
 startup_mode = "Windowed"
+title = "Prometheus Core"
+decorations = "Full"
 
 [font]
 size = 10.0
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "JetBrains Mono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "JetBrains Mono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "JetBrains Mono Nerd Font"
 style = "Italic"
 
-# Esquema de cores Graphite para Alacritty (TOML)
-
 [colors.primary]
-background = "#161616"
-foreground = "#f5f5f5"
-dim_foreground = "#f5f5f5"
-bright_foreground = "#ffffff"
+background = "#1a1a1a"
+foreground = "#e8d5b7"
 
 [colors.cursor]
-text = "CellBackground"
-cursor = "CellForeground"
-
-[colors.selection]
-text = "CellForeground"
-background = "#424242"
+text = "#1a1a1a"
+cursor = "#f0a868"
 
 [colors.normal]
-black   = "#161616"
-red     = "#fd6883"
-green   = "#87c095"
-yellow  = "#e3c78a"
-blue    = "#82aaff"
-magenta = "#c099ff"
-cyan    = "#86e1fc"
-white   = "#e3e3e3"
+black = "#2b1d1d"
+red = "#d84a3a"
+green = "#c75b2e"
+yellow = "#f0a868"
+blue = "#e87843"
+magenta = "#a83a2d"
+cyan = "#f5b878"
+white = "#e8d5b7"
 
 [colors.bright]
-black   = "#262626"
-red     = "#fd6883"
-green   = "#87c095"
-yellow  = "#e3c78a"
-blue    = "#82aaff"
-magenta = "#c099ff"
-cyan    = "#86e1fc"
-white   = "#ffffff"
+black = "#4a3030"
+red = "#ed5a4a"
+green = "#d86b3e"
+yellow = "#ffb878"
+blue = "#f88853"
+magenta = "#b84a3d"
+cyan = "#ffc888"
+white = "#f5e5c7"
+
+[colors.selection]
+text = "#1a1a1a"
+background = "#e87843"
+
+[colors.search.matches]
+foreground = "#1a1a1a"
+background = "#f0a868"
+
+[colors.search.focused_match]
+foreground = "#1a1a1a"
+background = "#d84a3a"
+
+[colors.vi_mode_cursor]
+text = "#1a1a1a"
+cursor = "#e87843"
