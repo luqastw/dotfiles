@@ -1,3 +1,6 @@
+[general]
+import = ["~/.config/alacritty/themes/wallhaven-6lpmmw.toml"]
+
 [window]
 dimensions = { columns = 95, lines = 21 }
 padding = { x = 20, y = 20 }
@@ -18,34 +21,6 @@ style = "Bold"
 [font.italic]
 family = "JetBrains Mono Nerd Font"
 style = "Italic"
-
-[colors.primary]
-background = '0x0a0a0a'
-foreground = '0xd1d1d1'
-
-[colors.cursor]
-text = '0x0a0a0a'
-cursor = '0x5e5e5e'
-
-[colors.normal]
-black   = '0x1c1c1c'
-red     = '0x666666'
-green   = '0x808080'
-yellow  = '0x999999'
-blue    = '0x5e6a71'
-magenta = '0x7a7a7a'
-cyan    = '0x8ea3a3'
-white   = '0xd1d1d1'
-
-[colors.bright]
-black   = '0x333333'
-red     = '0x7a7a7a'
-green   = '0x949494'
-yellow  = '0xadadad'
-blue    = '0x78868c'
-magenta = '0x919191'
-cyan    = '0xa8bdbd'
-white   = '0xffffff'
 
 [[keyboard.bindings]]
 key = "Return"

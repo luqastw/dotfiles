@@ -1,0 +1,30 @@
+# Palette based on wallhaven-8g9e2k.jpg (UFO ring over dusk landscape)
+# Brighter/vibrant variant, leaning on the ring's cyan/lavender highlights
+
+[colors.primary]
+background = '0x151a28'
+foreground = '0xd7d6f2'
+
+[colors.cursor]
+text   = '0x151a28'
+cursor = '0xa8f0e8'
+
+[colors.normal]
+black   = '0x151a28'
+red     = '0xe08a5c'
+green   = '0x8aa77e'
+yellow  = '0xe6b573'
+blue    = '0x7c8dd6'
+magenta = '0xac9de8'
+cyan    = '0x8fdce8'
+white   = '0xd7d6f2'
+
+[colors.bright]
+black   = '0x4c5372'
+red     = '0xf4a67f'
+green   = '0xa6bd99'
+yellow  = '0xf5cf94'
+blue    = '0x9dabf0'
+magenta = '0xc7bcf5'
+cyan    = '0xb0ecf5'
+white   = '0xf4f3fc'

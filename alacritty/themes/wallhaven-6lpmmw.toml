@@ -1,0 +1,30 @@
+# Palette based on wallhaven-6lpmmw.jpg (cyberpunk alley at dusk)
+# Colors sampled from the image's neon signage (red/magenta/warm light) and dark blue-grey street tones
+
+[colors.primary]
+background = '0x0b0a0d'
+foreground = '0xd5c9bc'
+
+[colors.cursor]
+text   = '0x0b0a0d'
+cursor = '0xd0b35e'
+
+[colors.normal]
+black   = '0x0b0a0d'
+red     = '0xb53338'
+green   = '0x4c804c'
+yellow  = '0xd0b35e'
+blue    = '0x4d5a8c'
+magenta = '0xb75eb0'
+cyan    = '0x719f9e'
+white   = '0xd5c9bc'
+
+[colors.bright]
+black   = '0x4c5666'
+red     = '0xd94c51'
+green   = '0x6ca66c'
+yellow  = '0xebcd75'
+blue    = '0x6b79b2'
+magenta = '0xd97ed1'
+cyan    = '0x86bfbe'
+white   = '0xe8e0d6'

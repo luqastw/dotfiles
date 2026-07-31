@@ -3,6 +3,7 @@ set $term alacritty
 
 font pango: JetBrains Mono Nerd Font 12
 
+exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen --lock dimblur --nofork
 exec --no-startup-id nm-applet
@@ -25,7 +26,7 @@ tiling_drag modifier titlebar
 
 bindsym $mod+Return exec $term
 bindsym $mod+c kill
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'JetBrains Mono Nerd Font-10' -nb '#0a0a0a' -nf '#d1d1d1' -sb '#444444' -sf '#ffffff'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'JetBrains Mono Nerd Font-10' -nb '#0b0a0d' -nf '#d5c9bc' -sb '#4d5a8c' -sf '#e8e0d6'
 bindsym $mod+F11 exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym $mod+Shift+F11 exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
@@ -132,31 +133,34 @@ mode "special" {
 
 bindsym $mod+z mode "special"
 
-client.focused          #666666 #333333 #ffffff #444444   #505050
-client.focused_inactive #1a1a1a #1a1a1a #888888 #1a1a1a   #1a1a1a
-client.unfocused        #0a0a0a #0a0a0a #555555 #0a0a0a   #0a0a0a
-client.urgent           #d1d1d1 #d1d1d1 #0a0a0a #d1d1d1   #d1d1d1
+client.focused          #4d5a8c #4d5a8c #e8e0d6 #719f9e   #4d5a8c
+client.focused_inactive #4c5666 #4c5666 #d5c9bc #4c5666   #4c5666
+client.unfocused        #0b0a0d #0b0a0d #4c804c #0b0a0d   #0b0a0d
+client.urgent           #b53338 #b53338 #0b0a0d #b53338   #b53338
 
 bar {
   status_command i3blocks -c ~/.config/i3blocks/config
   position top
   separator_symbol "::"
   colors {
-        background #0a0a0a
-        statusline #b0b0b0
-        separator  #333333
+        background #0b0a0d
+        statusline #d5c9bc
+        separator  #4c5666
 
-        focused_workspace  #666666 #666666 #ffffff
-        active_workspace   #333333 #333333 #d1d1d1
-        inactive_workspace #0a0a0a #0a0a0a #666666
-        urgent_workspace   #d1d1d1 #d1d1d1 #0a0a0a
+        focused_workspace  #4d5a8c #4d5a8c #e8e0d6
+        active_workspace   #4c5666 #4c5666 #d5c9bc
+        inactive_workspace #0b0a0d #0b0a0d #4c804c
+        urgent_workspace   #b53338 #b53338 #0b0a0d
         }
   font pango: JetBrains Mono Nerd Font 9
   tray_output primary
+  tray_padding 4
 }
 
 gaps inner 5
 gaps outer 3
+smart_gaps on
+smart_borders on
 workspace 5 gaps horizontal 100
 workspace 5 gaps vertical 50
 workspace 5 gaps inner 10
