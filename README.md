@@ -25,34 +25,23 @@ My personal Arch Linux rice: i3wm + Alacritty + picom + dunst, tied together wit
     ```bash
     cd $HOME
     git clone --depth 1 https://github.com/luqastw/dotfilestw
-    ```
-
-3. Install the official-repo dependencies:
-
-    ```bash
-    sudo pacman -S --needed i3-wm i3blocks i3lock alacritty picom dunst dex xss-lock \
-      network-manager-applet unclutter dmenu maim xclip scrot thunar kwallet \
-      polkit-kde-agent sysstat libpulse acpi xorg-xrdb xorg-xinput neovim fastfetch \
-      ttf-jetbrains-mono-nerd papirus-icon-theme
-    ```
-
-4. Install the AUR dependencies (via `yay`, `paru`, or your helper of choice):
-
-    ```bash
-    yay -S --needed betterlockscreen nitrogen fcitx bibata-cursor-theme
-    ```
-
-5. Install herdr (not packaged in pacman/AUR, uses its own installer):
-
-    ```bash
-    curl -fsSL https://herdr.dev/install.sh | sh
-    ```
-
-6. Copy (or symlink) each folder into `~/.config/`, e.g.:
-
-    ```bash
     cd dotfilestw
-    cp -r i3 i3blocks alacritty picom.conf dunst gtk-3.0 gtk-4.0 herdr nitrogen nvim ~/.config/
+    ```
+
+3. Run the installer:
+
+    ```bash
+    ./INSTALL.sh
+    ```
+
+    This installs the pacman + AUR dependencies, herdr, and symlinks every config
+    folder into `~/.config` (backing up anything already there). You can also run
+    a single step:
+
+    ```bash
+    ./INSTALL.sh deps      # dependencies only
+    ./INSTALL.sh configs   # symlink configs only
+    ./INSTALL.sh help      # usage
     ```
 
 ---
