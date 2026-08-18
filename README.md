@@ -1,6 +1,7 @@
 # dotfilestw 🌇
 
 ![](screenshots/desktop.png)
+![](screenshots/rofi.png)
 ![](screenshots/split-terminals.png)
 
 My personal Arch Linux rice: i3wm + Alacritty + picom + dunst, tied together with
@@ -57,7 +58,7 @@ For additional details or troubleshooting, visit the [issues page](https://githu
 | Action              | Keybind             | Description                    |
 |----------------------|----------------------|---------------------------------|
 | Terminal             | `SUPER + RETURN`     | Launch Alacritty                |
-| App Launcher         | `SUPER + D`          | Launch dmenu                    |
+| App Launcher         | `SUPER + D`          | Launch rofi (`drun`)            |
 
 ---
 
@@ -65,10 +66,15 @@ For additional details or troubleshooting, visit the [issues page](https://githu
 
 | Action                    | Keybind                  | Description                          |
 |----------------------------|----------------------------|----------------------------------------|
-| Screenshot (full, clipboard) | `SUPER + F11`            | Copy full screenshot via maim + xclip |
+| Screenshot (full, clipboard) | `SUPER + F11`            | Copy full screenshot via maim + xclip, notify-send confirms |
 | Screenshot (select, clipboard) | `SUPER + SHIFT + F11`  | Copy selected-area screenshot         |
 | Screenshot (scrot)         | `SUPER + Z` then `S`      | Enter special mode, take scrot -s     |
-| Power Menu                | Click power block on bar  | Runs `power_dmenu.sh` (lock/exit/suspend/reboot/shutdown) |
+| Toggle Scratchpad Terminal  | `SUPER + minus`          | Show/hide dropdown Alacritty (auto-spawns) |
+| Stash Window to Scratchpad  | `SUPER + SHIFT + minus`  | Move focused window to the general scratchpad pool |
+| Cycle Scratchpad Pool       | `SUPER + equal`          | Show next stashed scratchpad window |
+| Power Menu                | Click power block on bar  | Runs `power_dmenu.sh` (rofi: lock/exit/suspend/reboot/shutdown) |
+| Wifi Toggle / Manage       | Click / right-click wifi block on bar | Toggles radio via nmcli, right-click opens `nmtui` |
+| Bluetooth Toggle / Manage  | Click / right-click BT block on bar | Toggles power via bluetoothctl, right-click opens `blueman-manager` |
 | Volume Up/Down/Mute        | `XF86AudioRaiseVolume` / `LowerVolume` / `Mute` | Adjusts volume via pactl |
 
 ---
@@ -178,7 +184,7 @@ Prefix key is `F12`.
 - Terminal workspace manager: **[herdr](https://herdr.dev)**
 - Compositor: **[picom](https://github.com/yshui/picom)**
 - Notifications: **[dunst](https://github.com/dunst-project/dunst)**
-- Launcher: **[dmenu](https://tools.suckless.org/dmenu/)**
+- Launcher: **[rofi](https://github.com/davatorium/rofi)**
 - Wallpaper: **[nitrogen](https://github.com/l3ib/nitrogen)**
 - Editor: **[Neovim](https://github.com/neovim/neovim)** ([LazyVim](https://github.com/LazyVim/LazyVim))
 - System info: **[fastfetch](https://github.com/fastfetch-cli/fastfetch)**
@@ -187,4 +193,5 @@ Prefix key is `F12`.
 ## Screenshots
 
 ![](screenshots/desktop.png)
+![](screenshots/rofi.png)
 ![](screenshots/split-terminals.png)
