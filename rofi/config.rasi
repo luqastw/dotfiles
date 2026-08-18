@@ -1,0 +1,100 @@
+configuration {
+    modi:               "drun,run";
+    font:               "JetBrains Mono Nerd Font 11";
+    show-icons:         true;
+    drun-display-format: "{name}";
+    display-drun:       " Apps";
+    display-run:        " Run";
+}
+
+* {
+    bg:         #16110bee;
+    bg-alt:     #211a12ee;
+    bg-input:   #2b2116ee;
+    fg:         #e4d3b0;
+    fg-dim:     #9c8768;
+    accent:     #c99a5b;
+    accent-fg:  #1c140a;
+    highlight:  #e3b284;
+    border-col: #3a2f20;
+
+    background-color: transparent;
+    text-color:        @fg;
+}
+
+window {
+    background-color: @bg;
+    border:            1px;
+    border-color:      @border-col;
+    border-radius:     16px;
+    padding:           14px;
+    width:             32%;
+    location:          center;
+    anchor:            center;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  12px;
+}
+
+inputbar {
+    children:          [ prompt, entry ];
+    background-color:  @bg-input;
+    border-radius:      12px;
+    padding:            12px 16px;
+    spacing:            12px;
+}
+
+prompt {
+    text-color: @highlight;
+}
+
+entry {
+    placeholder:       "Search…";
+    placeholder-color: @fg-dim;
+    text-color:        @fg;
+}
+
+listview {
+    lines:     8;
+    columns:   1;
+    spacing:   3px;
+    scrollbar: false;
+    padding:   2px 0px 0px 0px;
+    fixed-height: false;
+}
+
+element {
+    padding:       9px 12px;
+    border-radius: 10px;
+    spacing:       12px;
+}
+
+element-icon {
+    size:            22px;
+    vertical-align:  0.5;
+}
+
+element-text {
+    text-color:      inherit;
+    vertical-align:  0.5;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:        @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:        @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:        @accent-fg;
+    border:            1px;
+    border-color:      @highlight;
+    border-radius:     10px;
+}

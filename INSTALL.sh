@@ -17,8 +17,9 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 PACMAN_DEPS=(
-  i3-wm i3blocks i3lock alacritty picom dunst dex xss-lock
-  network-manager-applet unclutter dmenu maim xclip scrot thunar kwallet
+  i3-wm i3blocks i3lock alacritty picom dunst dex xss-lock rofi
+  network-manager-applet networkmanager bluez bluez-utils blueman
+  unclutter maim xclip scrot thunar kwallet
   polkit-kde-agent sysstat libpulse acpi xorg-xrdb xorg-xinput neovim
   fastfetch ttf-jetbrains-mono-nerd papirus-icon-theme
 )
@@ -39,6 +40,7 @@ CONFIG_DIRS=(
   "nitrogen:nitrogen"
   "nvim:nvim"
   "fastfetch:fastfetch"
+  "rofi:rofi"
 )
 
 CONFIG_FILES=(

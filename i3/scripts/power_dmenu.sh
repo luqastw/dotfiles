@@ -1,41 +1,27 @@
 #!/bin/bash
+# System power menu. Uses rofi -dmenu; picks up color scheme from ~/.config/rofi/config.rasi.
+# Two trigger paths: i3blocks calls this on click with $BLOCK_BUTTON set; polybar's
+# click-left has no such env var, so it passes an explicit "menu" argument instead.
 
-# Opções
-lock="Block"
+lock="Lock"
 logout="Exit"
 suspend="Suspend"
 reboot="Reboot"
 shutdown="Shutdown"
 
-if [ "$BLOCK_BUTTON" ]; then
-  options="$lock\n$logout\n$suspend\n$reboot\n$shutdown"
+if [ "$BLOCK_BUTTON" ] || [ "$1" = "menu" ]; then
+    options="$lock\n$logout\n$suspend\n$reboot\n$shutdown"
+    selected=$(echo -e "$options" | rofi -dmenu -i -p "System:")
 
-  selected=$(echo -e "$options" | dmenu -i -p "System:" \
-    -fn 'JetBrains Mono Nerd Font-10' \
-    -nb '#0b0a0d' \
-    -nf '#d5c9bc' \
-    -sb '#4d5a8c' \
-    -sf '#e8e0d6')
-
-  case "$selected" in
-  "$lock")
-    i3lock
-    ;;
-  "$logout")
-    i3-msg exit
-    ;;
-  "$suspend")
-    systemctl suspend
-    ;;
-  "$reboot")
-    systemctl reboot
-    ;;
-  "$shutdown")
-    systemctl poweroff
-    ;;
-  esac
+    case "$selected" in
+        "$lock")     i3lock ;;
+        "$logout")   i3-msg exit ;;
+        "$suspend")  systemctl suspend ;;
+        "$reboot")   systemctl reboot ;;
+        "$shutdown") systemctl poweroff ;;
+    esac
 fi
 
 echo "⏻"
 echo "⏻"
-echo "#e8e0d6"
+echo "#e4d3b0"
