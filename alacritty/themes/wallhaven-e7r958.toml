@@ -1,0 +1,31 @@
+# Palette based on wallhaven-e7r958.jpg (golden sunset, silhouette against clouds)
+# Warm gold/terracotta from the sky highlights, dusty mauve from the cloud shadows;
+# background/foreground/accent match the rest of the rice (i3, dunst, rofi).
+
+[colors.primary]
+background = '0x0c0906'
+foreground = '0xe4d3b0'
+
+[colors.cursor]
+text   = '0x0c0906'
+cursor = '0xc99a5b'
+
+[colors.normal]
+black   = '0x0c0906'
+red     = '0xb3542e'
+green   = '0x9c8f4a'
+yellow  = '0xd2a888'
+blue    = '0x6d6a8c'
+magenta = '0xab7a92'
+cyan    = '0x6a8c85'
+white   = '0xe4d3b0'
+
+[colors.bright]
+black   = '0x4a3c2a'
+red     = '0xd97a4a'
+green   = '0xc4b568'
+yellow  = '0xe3b284'
+blue    = '0x8f8ab0'
+magenta = '0xcf9bb0'
+cyan    = '0x8bafa8'
+white   = '0xf5ead2'

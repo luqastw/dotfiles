@@ -8,7 +8,7 @@
     offset = 15x50
 
     frame_width = 2
-    frame_color = "#525f96"
+    frame_color = "#c99a5b"
     separator_color = frame
     corner_radius = 6
     gap_size = 6
@@ -40,19 +40,19 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#0b0e14"
-    foreground = "#62735a"
-    frame_color = "#333a52"
-    timeout = 5
+    background = "#16110b"
+    foreground = "#6b5a42"
+    frame_color = "#3a2f20"
+    timeout = 3
 
 [urgency_normal]
-    background = "#0b0e14"
-    foreground = "#b8bcd6"
-    frame_color = "#525f96"
-    timeout = 8
+    background = "#16110b"
+    foreground = "#e4d3b0"
+    frame_color = "#c99a5b"
+    timeout = 4
 
 [urgency_critical]
-    background = "#0b0e14"
-    foreground = "#d7d9ee"
-    frame_color = "#c4694a"
+    background = "#16110b"
+    foreground = "#f5ead2"
+    frame_color = "#b3542e"
     timeout = 0
