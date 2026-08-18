@@ -1,0 +1,43 @@
+# betterlockscreen — tema alinhado à paleta âmbar/rust do i3 (config.d/30-appearance.conf) e dunst
+
+font="JetBrainsMono Nerd Font"
+
+# efeito no wallpaper: blur mais forte e dim mais leve = vidro fosco, não breu
+blur_level=5
+dim_level=30
+
+# anel ocioso — dourado sobre centro escuro translúcido
+ringcolor=c99a5bff
+insidecolor=1c140a99
+separatorcolor=00000000
+
+# anel durante verificação — dourado claro
+ringvercolor=e3b284ff
+insidevercolor=1c140acc
+
+# anel em senha errada — rust
+ringwrongcolor=b3542eff
+insidewrongcolor=b3542e33
+
+# texto
+timecolor=e3b284ff
+time_format="%H:%M"
+greetercolor=c99a5bcc
+locktext="Digite a senha"
+layoutcolor=c99a5bff
+
+# teclas
+keyhlcolor=c99a5bff
+bshlcolor=b3542eff
+modifcolor=b3542eff
+
+# mensagens de estado
+veriftext="Verificando..."
+verifcolor=e3b284ff
+wrongtext="Errada!"
+wrongcolor=b3542eff
+
+# caixa de login e fundo sólido de fallback
+loginbox=1c140a99
+loginshadow=00000066
+bgcolor=1c140aff

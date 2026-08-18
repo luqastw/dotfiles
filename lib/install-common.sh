@@ -25,6 +25,7 @@ CONFIG_DIRS=(
   "i3:i3"
   "i3blocks:i3blocks"
   "alacritty:alacritty"
+  "betterlockscreen:betterlockscreen"
   "dunst:dunst"
   "gtk-3.0:gtk-3.0"
   "gtk-4.0:gtk-4.0"

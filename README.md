@@ -17,7 +17,8 @@ My personal Arch Linux rice: i3wm + Alacritty + picom + dunst, tied together wit
 - **Wifi/Bluetooth from the bar**: left-click toggles radio/power, right-click opens
   `nmtui` / `blueman-manager` for full management — no separate applet needed.
 - **Auto screen lock**: `xss-lock` + `betterlockscreen` lock the session automatically
-  before suspend, not just on manual trigger.
+  before suspend, not just on manual trigger — themed to the same amber/rust palette
+  via `betterlockscreen/betterlockscreenrc`.
 - **Idle cursor hiding** via `unclutter` (3s timeout) and an **input method** ready
   via `fcitx`.
 - **Multiple bundled Alacritty themes** under `alacritty/themes/` (Tokyo Night plus
